@@ -1,0 +1,46 @@
+{
+  "name": "meow",
+  "description": "A Streamlabs Twitch Extension",
+  "version": "1.0.0",
+  "author": "devteam@streamlabs.com",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot  --host=extensions.streamlabs.dev --https --cert=./certs/server.crt --key=./certs/server.key",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "vulcan": "npm run build && cd dist && zip -r ../release/vulcan.zip ."
+  },
+  "devDependencies": {
+    "animate.css": "^3.5.2",
+    "axios": "^0.16.2",
+    "babel-core": "^6.0.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "font-awesome": "^4.7.0",
+    "html-webpack-plugin": "^2.29.0",
+    "http-server": "^0.10.0",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.3",
+    "normalize.css": "^7.0.0",
+    "resolve-url-loader": "^2.1.0",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.2",
+    "vue": "^2.3.3",
+    "vue-loader": "^12.2.2",
+    "vue-odometer": "^0.1.1",
+    "vue-template-compiler": "^2.3.3",
+    "vuex": "^2.3.1",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
+  },
+  "dependencies": {
+    "vue-resource": "^1.3.4"
+  }
+}
